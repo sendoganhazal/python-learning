@@ -65,6 +65,21 @@ print("-" * 50)
 # - Listedeki 20 değerini silelim
 # ============================================================
 print("SORU 4 ÇÖZÜM")
+
+sayilar = [10, 20, 30, 40, 50]
+
+#ilk elemanı yazdırma
+ilk = sayilar[0]
+print(f"İlk eleman: {ilk}") 
+
+#son elemanı yazdırma
+son = sayilar[-1]
+print(f"Son eleman: {son}") 
+
+#2. indexten sona kadar olan sayıları yazdırma
+iki_son = sayilar[2:] 
+print(f"2. indexten sona kadar olan sayılar: {iki_son}") 
+
 print("-" * 50)
 
 # ============================================================
@@ -75,6 +90,13 @@ print("-" * 50)
 # - Tuple'ın değiştirilemediğini göstermek için (yorum satırıyla) örnek verelim
 # ============================================================
 print("SORU 5 ÇÖZÜM")
+
+koordinat = (12, 34) #tuple oluşturdum
+x,y = koordinat #unpacking ile x ve y'e atadım
+print(f"x: {x}, y: {y}") #x ve y'i yazdırdım
+
+# koordinat[0] = 21 #'tuple' object does not support item assignment
+# koordinat[1] = 50 #'tuple' object does not support item assignment
 
 print("-" * 50)
 
@@ -87,6 +109,20 @@ print("-" * 50)
 # - Tüm anahtarları ve tüm değerleri yazdıralım
 # ============================================================
 print("SORU 6 ÇÖZÜM")
+
+ogrenci = {
+    "isim": "Hazal",
+    "yas": 22,
+    "bolum":"Yazılım"
+} # öğrenci dictionary'si oluşturuldu
+
+print(f"Öğrencinin adı {ogrenci["isim"]}") #öğrencinin adı yazdırıldı
+
+ogrenci["not"] = 90 #öğrencinin notu eklendi
+ogrenci["yas"] = 23 #öğrencinin yasi güncellendi
+
+print(ogrenci.keys()) # tüm anahtarlar yazdırıldı
+print(ogrenci.values()) #tüm değerler yazıdıldı
 print("-" * 50)
 
 # ============================================================
@@ -97,4 +133,14 @@ print("-" * 50)
 # - benzersiz isim sayısını yazdıralım
 # ============================================================
 print("SORU 7 ÇÖZÜM")
+
+liste = ["Mehmet", "Ali", "Ayşe", "Ali", "Mehmet", "Ayşe"]
+
+benzersiz_isimler = set(liste) #liste'yi sete çevirdik
+print(f"Benzersiz isimler: {benzersiz_isimler}") #sete dönüştürülmüş listeyi yazdırdık
+
+isim_sayisi = len(benzersiz_isimler) #benzersiz isim sayısını bulduk
+print(f"Benzersiz isim sayısı {isim_sayisi}") #benzersiz isim sayısını yazdırdık
+
+
 print("-" * 50)
