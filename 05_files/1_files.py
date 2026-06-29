@@ -71,3 +71,13 @@ yeni_icerik = icerik.upper()
 dosya = open("islenmisi_ornek.txt","w",encoding="UTF-8")
 dosya.write(yeni_icerik)
 dosya.close()
+
+# with yapısı: dosya otomatik olarak kapanır, daha temiz bir kod yazılmış olur
+
+with open("ornek.txt","r",encoding="UTF-8") as dosya :
+    icerik = dosya.read()
+    print(f"with ile alınan içerik: \n{icerik}")
+    
+#with ile yazma
+with open("with_dosya_yazma","w",encoding="UTF-8") as dosya :
+    dosya.write("with ile yazma işlemi gerçekleştirildi")
