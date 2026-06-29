@@ -51,3 +51,23 @@ dosya.close()
 
 satir_sayisi = len(satirlar)
 print(f"Toplam Satır Sayısı: {satir_sayisi}")
+
+# dosyaya yazma
+# "w" -> yazma işlemi. dosyaya yazar
+dosya = open("yeni_dosya.txt","w", encoding="UTF-8")
+
+dosya.write("Merhaba Dünya\n")
+dosya.write("Python öğreniyoruz")
+
+dosya.close()
+
+# oku -> işle -> kaydet
+dosya = open("ornek.txt","r", encoding = "UTF-8")
+icerik = dosya.read()
+dosya.close()
+
+yeni_icerik = icerik.upper()
+
+dosya = open("islenmisi_ornek.txt","w",encoding="UTF-8")
+dosya.write(yeni_icerik)
+dosya.close()
