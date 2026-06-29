@@ -21,7 +21,7 @@ dosya = open("ornek.txt","r", encoding = "UTF-8")
 
 icerik = dosya.read() #tüm dosyayı okur
 
-print(f"Dosya İçeriği: {icerik}")
+print(f"Dosya İçeriği: \n{icerik}")
 
 dosya.close() # dosyayı kapar
 
@@ -33,3 +33,21 @@ for satir in dosya:
     print(f"Satır: {satir.strip()}") # strip() -> satır sonundaki boşlukları temizler
 
 dosya.close()
+
+# dosya içeriğinin işlenmesi
+dosya = open("ornek.txt","r", encoding = "UTF-8")
+icerik = dosya.read()
+dosya.close()
+
+print(icerik)
+
+yeni_icerik = icerik.upper()
+print(f"Yeni İçerik: \n{yeni_icerik}")
+
+#satır sayısını bulmak
+dosya = open("ornek.txt","r", encoding = "UTF-8")
+satirlar = dosya.readlines()
+dosya.close()
+
+satir_sayisi = len(satirlar)
+print(f"Toplam Satır Sayısı: {satir_sayisi}")
