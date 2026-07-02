@@ -39,3 +39,4 @@ requirements.txt
     - Kurulum:
         - pip install -r .\requirements.txt
 """
+

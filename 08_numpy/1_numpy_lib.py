@@ -23,3 +23,4 @@ Numpy bölümünde ne öğrenicez?
     - matris işlemleri
     - rastgele sayı üretimi
 """
+import numpy as np
