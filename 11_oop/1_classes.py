@@ -32,7 +32,7 @@ Ogrenci class
 
 class Ogrenci:
     def __init__(self, isim, yas):  # self = oluşturulan nesneyi temsil eder, isim ve yaş başlangıç parametrelerimiz
-        print(f"Yeni bir öğrenci oluşturuluyor: {isim}, {yas}")    
+        print(f"Yeni bir öğrenci oluşturuluyor: {isim}, {yas}")
 
 # nesne (object) oluşturma
 ogrenci1 = Ogrenci("Hazal",20)
@@ -45,14 +45,34 @@ yani bir nesnenin verilerini tutan yapılarıdır
 """
 
 # attribute kullanımı
-
+class Ogrenci:
+    def __init__(self, isim, yas):
+        self.isim = isim  # self.isim -> ogrenci1 nesnesinin isim attribute u
+        self.yas = yas  # self.yas -> ogrenci1 nesnesinin yaş attribute u
+        
 
 # ogrenci1 nesnesinin attribute larına nasıl ulaşabiliriz?
+ogrenci1 = Ogrenci("Hazal", 35)
+print(f"Öğrenci ismi: {ogrenci1.isim}, Öğrenci yaşı: {ogrenci1.yas}")
 
 """
 Metot (method): bir class içerisinde tanımlanan fonksiyonlardır
 bir nesnenin yapabileceği işlemleri temsil ederler
 """
+
+
+class Ogrenci:
+    def __init__(self, isim, yas):
+        self.isim = isim
+        self.yas = yas
+        
+    def tanit(self):  # self parametresi -> nesneyi temsil eder
+        print(f"Merhaba, benim adım: {self.isim}")   
+
+ogrenci1 = Ogrenci("Hazal", 35)
+ogrenci1.tanit()  # ogrenci1 nesnesinin tanit metodunu çağırıyoruz
+ogrenci2 = Ogrenci("Kaan", 25)
+ogrenci2.tanit()  # ogrenci2 nesnesinin tanit metodunu çağırıyoruz
 
 """
 Object oluşturma ve class kullanımı
@@ -60,9 +80,6 @@ Object oluşturma ve class kullanımı
     - object (nesne): şablondan üretilen yapı (mercedes, audi)
 
 """
-
-# object oluşturma
-
 
 
 # attribute değerlerine erişim
