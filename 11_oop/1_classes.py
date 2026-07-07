@@ -43,16 +43,16 @@ yani bir nesnenin verilerini tutan yapılarıdır
 Öğrenci:
     - isim, yaş ve bölüm: bunlar öğrencinin attribute larıdır.
 """
-
-# attribute kullanımı
 class Ogrenci:
     def __init__(self, isim, yas):
         self.isim = isim  # self.isim -> ogrenci1 nesnesinin isim attribute u
         self.yas = yas  # self.yas -> ogrenci1 nesnesinin yaş attribute u
         
+# attribute kullanımı
+ogrenci1 = Ogrenci("Hazal", 35)
+
 
 # ogrenci1 nesnesinin attribute larına nasıl ulaşabiliriz?
-ogrenci1 = Ogrenci("Hazal", 35)
 print(f"Öğrenci ismi: {ogrenci1.isim}, Öğrenci yaşı: {ogrenci1.yas}")
 
 """
@@ -81,11 +81,25 @@ Object oluşturma ve class kullanımı
 
 """
 
+class Kitap:
+    def __init__(self,isim,yazar,sayfa_sayisi):
+        self.isim = isim
+        self.yazar = yazar
+        self.sayfa_sayisi = sayfa_sayisi
+    
+    def bilgi_goster(self):
+        print(f"Kitap: {self.isim}\nYazar: {self.yazar}\nSayfa sayısı: {self.sayfa_sayisi}")
+        
+# object oluşturma
+kitap1 = Kitap("Python programlama","Kaan",500)
 
 # attribute değerlerine erişim
-
+print(kitap1.isim)
+print(kitap1.yazar)
+print(kitap1.sayfa_sayisi)
 
 # method
+kitap1.bilgi_goster()
 
 """
 Kitap: Python programlama
@@ -94,3 +108,11 @@ Sayfa sayısı: 500
 """
 
 # birden fazla obje oluşturma
+kitap1 = Kitap("Java programlama","Hazal",600)
+kitap2 = Kitap("C++ programlama","Kaan",700)
+kitap3 = Kitap("C# programlama","Ahmet",800)
+
+kitap1.bilgi_goster()
+kitap2.bilgi_goster()
+kitap3.bilgi_goster()
+    
